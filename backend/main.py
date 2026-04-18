@@ -500,17 +500,3 @@ async def shutdown_event():
     """Shutdown"""
     print("\n👋 Shutting down...")
     cleanup_old_files(AUDIO_DIR)
-
-
-# ============================================================
-# Run Server
-# ============================================================
-
-if __name__ == "__main__":
-    import uvicorn
-    
-    if not os.getenv("NVIDIA_API_KEY"):
-        print("⚠️  NVIDIA_API_KEY not set!")
-        print("   Add to .env file or set environment variable")
-    
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
