@@ -20,7 +20,7 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 # Import tutor engine
-from src.tutor.engine_nvidia import VirtualTutor
+from src.tutor.engine_complete import VirtualTutor
 
 # ============================================================
 # Configuration
