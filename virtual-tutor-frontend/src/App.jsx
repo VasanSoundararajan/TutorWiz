@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mic, MicOff, Send, Settings, Volume2, VolumeX, Loader2 } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import AnimatedAvatar from './components/AnimatedAvatar';
 import { tutorAPI, SpeechRecognitionService } from './services/api';
 import './App.css';
@@ -439,6 +440,7 @@ function App() {
 
       {/* Hidden Audio Element */}
       <audio ref={audioRef} className="hidden" />
+      <SpeedInsights />
     </div>
   );
 }
